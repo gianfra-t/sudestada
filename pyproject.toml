@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sudestada"
+version = "0.1.0"
+description = "Conceptual-design framework for powered-lift aircraft: a typed ontology, models, fits and checks."
+requires-python = ">=3.11"
+dependencies = ["numpy", "scipy", "matplotlib"]
+
+[project.optional-dependencies]
+aerosandbox = ["aerosandbox"]   # aero.fixed.to_asb and fits.aero (VLM)
+dev = ["pytest", "pyright", "scipy-stubs"]  # scipy-stubs: scipy ships no types, pyright needs them
+
+[tool.setuptools.packages.find]
+include = ["sudestada*"]
+namespaces = true
+
+[tool.setuptools.package-data]
+"sudestada.examples.parts" = ["data/**/*"]
+
+[tool.pyright]
+include = ["sudestada"]
+pythonVersion = "3.11"
+typeCheckingMode = "standard"
