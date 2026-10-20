@@ -41,3 +41,5 @@ It doubles down as documentation and material for mathematical concepts and mode
 
 This project and this repo in particular is strongly connected to an extension of `rotorpy` that uses `pydrake`, to create a rigid-multibody representation of the aircraft, for final conecptual validation and control.
 
+That extension is [gianfra-t/rotorpy](https://github.com/gianfra-t/rotorpy): its `DrakeMultirotor` simulates a Sudestada `Vehicle` directly (skeleton, masses, actuators, rotor and airframe models), and its `drake` extra installs this package.
+
